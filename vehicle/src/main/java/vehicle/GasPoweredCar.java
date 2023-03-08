@@ -33,7 +33,7 @@ public class GasPoweredCar extends Car {
     current fuel.*/
     public void drive(double miles) {
         if (miles < 0 || miles > getFuelLevel()) throw new IllegalArgumentException();
-        this.fuelLevel += getFuelLevel() + miles;
+        decreaseFuelLevel(miles);
         super.addMileage(miles);
     }
 
