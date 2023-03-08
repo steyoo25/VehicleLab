@@ -1,5 +1,5 @@
 package vehicle.src.main.java.vehicle;
 
-public class ChevorletBird {
+public class ChevorletBird extends ElectricCar {
     
 }
