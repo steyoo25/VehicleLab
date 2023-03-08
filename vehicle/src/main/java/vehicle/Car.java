@@ -1,7 +1,7 @@
 package vehicle.src.main.java.vehicle;
 
 public abstract class Car { 
-    private String mak, mod;
+    private String make, model;
     private double startMil;
     /** Creates a car with a starting mileage on the odometer.
     @throws IllegalArgumentException if startingMileage is negative*/
@@ -9,14 +9,14 @@ public abstract class Car {
         if(startingMileage < 0){
             throw new IllegalArgumentException();
         }
-        mak = make;
-        mod = model;
+        this.make = make;
+        this.model = model;
         startMil = startingMileage;
     }
     /** Starting mileage is 0. */
     public Car(String make, String model){
-        mak = make;
-        mod = model;
+        this.make = make;
+        this.model = model;
         startMil = 0;
     }
     /** If able to drive the full given number of miles, returns true. If
