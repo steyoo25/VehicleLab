@@ -1,5 +1,6 @@
 package vehicle.src.main.java.vehicle;
 
-public class FordFrivolous {
+public class FordFrivolous extends GasPoweredCar {
+
     
 }
