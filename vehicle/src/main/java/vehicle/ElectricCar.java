@@ -19,8 +19,7 @@ public abstract class ElectricCar extends Car {
      * is nonpositive.
      */
     public ElectricCar(String make, String model, double milesOnMaxCharge) {
-        super(make, model);
-        this.milesOnMaxCharge = milesOnMaxCharge;
+        this(make, model, 0, milesOnMaxCharge);
     }
 
     /**
