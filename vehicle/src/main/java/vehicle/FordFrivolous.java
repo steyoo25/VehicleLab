@@ -8,7 +8,7 @@ public class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying 
 
     /** Defaults mileage to 0. */
     public FordFrivolous() {
-        super("Ford", "Frivolous", 23.6, 20);
+        this(0);
     }
 
     @Override
