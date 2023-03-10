@@ -8,7 +8,7 @@ public class ChevroletBird extends ElectricCar implements Flying {
         super("Chevorlet", "Bird", startingMileage, 250);
     }
     /** Defaults mileage to 0. */
-    public ChevroletBird(){
+    public ChevroletBird() {
         this(0);
     }
     /** Returns whether the wings are currently extended. */

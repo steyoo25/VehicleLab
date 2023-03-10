@@ -13,7 +13,7 @@ public class GasPoweredCar extends Car {
         if (mpg < 0 || fuelCapacityGallons < 0) throw new IllegalArgumentException();
         this.mpg = mpg;
         this.fuelCapacityGallons = fuelCapacityGallons;
-        this.fuellevel = fuelCapacityGallons;
+        this.fuelLevel = fuelCapacityGallons;
     }
     
     /** Defaults mileage to 0.
@@ -24,7 +24,7 @@ public class GasPoweredCar extends Car {
         if (mpg < 0 || fuelCapacityGallons < 0) throw new IllegalArgumentException();
         this.mpg = mpg;
         this.fuelCapacityGallons = fuelCapacityGallons;
-        this.fuellevel = fuelCapacityGallons;
+        this.fuelLevel = fuelCapacityGallons;
     }
 
     /** Drives the full given number of miles.
