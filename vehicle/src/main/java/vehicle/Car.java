@@ -60,6 +60,9 @@ public abstract class Car {
     /** Adds mileage to the odometer.
     @throws IllegalArgumentException if miles is negative. */
     protected void addMileage(double miles){
+        if(miles < 0){
+            throw new IllegalArgumentException();
+        }
         mileage += miles;
     }
     /** The car attempts to drive, in order, each of the daily number of
