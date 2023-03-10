@@ -15,8 +15,7 @@ public class TeslaModelZ extends ElectricCar {
 
     /** Defaults mileage to 0. */
     public TeslaModelZ(int modelNum) {
-        super("Tesla", "Z", 340);
-        this.modelNum = modelNum;
+        this(0, modelNum);
     }
 
     /** Returns the model number. */
