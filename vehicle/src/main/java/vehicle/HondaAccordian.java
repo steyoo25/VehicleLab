@@ -1,4 +1,4 @@
-package vehicle.src.main.java.vehicle;
+package vehicle;
 
 public class HondaAccordian extends GasPoweredCar {
     double modelYear;
