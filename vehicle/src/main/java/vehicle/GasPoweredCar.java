@@ -20,11 +20,7 @@ public class GasPoweredCar extends Car {
     @throws IllegalArgumentException if mpg or fuelCapacityGallons are
     non-positive. */
     public GasPoweredCar(String make, String model, double mpg, double fuelCapacityGallons) {
-        super(make, model);
-        if (mpg < 0 || fuelCapacityGallons < 0) throw new IllegalArgumentException();
-        this.mpg = mpg;
-        this.fuelCapacityGallons = fuelCapacityGallons;
-        this.fuelLevel = fuelCapacityGallons;
+        this(make, model, 0, mpg, fuelCapacityGallons);        
     }
 
     /** Drives the full given number of miles.
@@ -74,7 +70,6 @@ public class GasPoweredCar extends Car {
     /** Decreases the amount of fuel in the gas tank based upon
     mpg and the number of miles passed as an argument. */   
     protected void decreaseFuelLevel(double miles) {
-        if (miles < 0) throw new IllegalArgumentException();
-        this.fuelLevel = Math.max(getFuelLevel()-miles, 0);
+        this.fuelLevel -= miles;
     }
 }
