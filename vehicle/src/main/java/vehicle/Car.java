@@ -1,4 +1,4 @@
-package vehicle.src.main.java.vehicle;
+package vehicle;
 
 import java.util.List;
 
@@ -82,6 +82,7 @@ public abstract class Car {
             days++;
             drive(tempMile);
         }
+        return days;
         
     };
 
