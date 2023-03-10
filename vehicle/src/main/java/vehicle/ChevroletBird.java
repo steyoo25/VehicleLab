@@ -8,8 +8,8 @@ public class ChevroletBird extends ElectricCar {
         super("Chevorlet", "Bird", startingMileage, 250);
     }
     /** Defaults mileage to 0. */
-    public ChevroletBird(){
-        super("Chevorlet", "Bird", 0, 250);
+    public ChevroletBird() {
+        this(0);
     }
     /** Returns whether the wings are currently extended. */
     public boolean checkWingsExtended(){
