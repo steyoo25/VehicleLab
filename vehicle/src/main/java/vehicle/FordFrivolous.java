@@ -10,4 +10,26 @@ public class FordFrivolous extends GasPoweredCar implements SelfDriving, Flying 
     public FordFrivolous() {
         super("Ford", "Frivolous", 23.6, 20);
     }
+
+    @Override
+    public boolean canFly(double miles) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'canFly'");
+    }
+
+    @Override
+    public void fly(double miles) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'fly'");
+    }
+
+    @Override
+    public void driveAutonomously(double miles) {
+        
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'driveAutonomously'");
+    }
+
+    
+    
 }
