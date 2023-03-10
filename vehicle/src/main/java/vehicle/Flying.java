@@ -1,5 +1,4 @@
-package vehicle.src.main.java.vehicle;
-
+package vehicle;
 public interface Flying {
     /** @throws IllegalArgumentException if miles is negative.*/ 
     public boolean canFly(double miles);

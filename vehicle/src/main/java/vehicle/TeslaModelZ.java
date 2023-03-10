@@ -1,5 +1,4 @@
-package vehicle.src.main.java.vehicle;
-
+package vehicle;
 public class TeslaModelZ extends ElectricCar {
 
     private int modelNum;

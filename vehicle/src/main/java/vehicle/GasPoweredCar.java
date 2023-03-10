@@ -1,4 +1,4 @@
-package vehicle.src.main.java.vehicle;
+package vehicle;
 
 public class GasPoweredCar extends Car {
     private double mpg;

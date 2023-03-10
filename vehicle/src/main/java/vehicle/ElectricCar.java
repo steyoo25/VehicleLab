@@ -1,4 +1,4 @@
-package vehicle.src.main.java.vehicle;
+package vehicle;
 
 public abstract class ElectricCar extends Car {
 

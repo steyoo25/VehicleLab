@@ -1,4 +1,4 @@
-package vehicle.src.main.java.vehicle;
+package vehicle;
 
 public abstract class Car { 
     private String make, model;
