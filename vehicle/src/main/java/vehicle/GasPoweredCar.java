@@ -1,5 +1,9 @@
 package vehicle;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+import java.util.Arrays;
+
 public class GasPoweredCar extends Car {
     private double mpg;
     private double fuelCapacityGallons;
@@ -28,7 +32,7 @@ public class GasPoweredCar extends Car {
     @throws IllegalArgumentException if miles is too high given the
     current fuel.*/
     public void drive(double miles) {
-        if (miles < 0 || miles > getFuelLevel()) throw new IllegalArgumentException();
+        if (miles < 0 || miles > getRemainingRange()) throw new IllegalArgumentException();
         decreaseFuelLevel(miles);
         super.addMileage(miles);
     }
@@ -56,7 +60,11 @@ public class GasPoweredCar extends Car {
     /** Returns how many more miles the car can currently go without
     refueling. */
     public double getRemainingRange() {
-        return getFuelLevel() * getMPG();
+        DecimalFormat df = new DecimalFormat("#.#");
+        df.setRoundingMode(RoundingMode.HALF_UP);
+        double result = getFuelLevel() * getMPG();
+        String something = df.format(result);
+        return Double.parseDouble(something);
     }
 
     /** Attempt to refuel the car with additional gallons.
@@ -70,6 +78,7 @@ public class GasPoweredCar extends Car {
     /** Decreases the amount of fuel in the gas tank based upon
     mpg and the number of miles passed as an argument. */   
     protected void decreaseFuelLevel(double miles) {
-        this.fuelLevel -= miles;
+        this.fuelLevel -= miles / mpg;
+        // System.out.println("fuel level is now " + fuelLevel);
     }
 }
