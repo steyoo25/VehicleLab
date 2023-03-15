@@ -7,14 +7,14 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-public class Group1_2HondaAccordianTest {
+public class Group1_2_HondaAccordianTest {
 
     @Test
     public void hondaTests() {
         assertThrows(IllegalArgumentException.class, () -> {
             HondaAccordian h = new HondaAccordian(-30.0, 2019);
         },
-                "Constructor should not expect a negative mile");
+        "Constructor should not expect a negative mile");
 
         HondaAccordian h = new HondaAccordian(30.0, 2017);
 
