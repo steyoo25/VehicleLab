@@ -36,9 +36,9 @@ public class TeslaModelZ extends ElectricCar implements SelfDriving{
      * mi)" You may not need to implement this method depending on how you implement
      * Car.toString()
      */
-    // public String toString() {
-    //     return super.toString();
-    // }
+    public String toString() {
+        return super.getMake() + " " + getModel() + " (" + super.getMileage() + " mi)";
+    }
 
     /** @throws IllegalArgumentException if miles is negative.*/
     public void driveAutonomously(double miles){
