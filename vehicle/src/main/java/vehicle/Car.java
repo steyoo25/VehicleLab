@@ -72,12 +72,14 @@ public abstract class Car {
     is attempted. */
     public int roadTrip(List<Double> milesEachDay){
         int days = 0;
-        for(int i = 0; i < milesEachDay.size(); i++){
+        int length = milesEachDay.size();
+        for(int i = 0; i < length; i++){
             double tempMile = milesEachDay.get(i);
             if(tempMile < 0){
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Temp mile is less than 0");
             }
-            if(tempMile < getRemainingRange()){
+            System.out.printf("miles: %f, getRemaining: %f\n", tempMile, getRemainingRange());
+            if(tempMile > getRemainingRange()){
                 return days;
             }
             days++;
