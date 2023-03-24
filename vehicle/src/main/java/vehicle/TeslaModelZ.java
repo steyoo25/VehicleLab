@@ -45,6 +45,6 @@ public class TeslaModelZ extends ElectricCar implements SelfDriving{
         if(miles < 0){
             throw new IllegalArgumentException();
         }
-        drive(Math.min(miles, getMaxRange()));
+        drive(Math.min(miles, getRemainingRange()));
     }
 }

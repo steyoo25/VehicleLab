@@ -36,7 +36,6 @@ public abstract class ElectricCar extends Car {
             throw new IllegalArgumentException("We cannot drive that many miles on this much charge");
 
         decreaseCharge(miles);
-
         addMileage(miles);
         
     }

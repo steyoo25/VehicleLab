@@ -5,7 +5,7 @@ public class ChevroletBird extends ElectricCar implements Flying {
     /** Chevrolet Birds have a 250 mile range on a full charge. They
     start with their wings retracted.*/
     public ChevroletBird(double startingMileage){
-        super("Chevorlet", "Bird", startingMileage, 250);
+        super("Chevrolet", "Bird", startingMileage, 250);
     }
     /** Defaults mileage to 0. */
     public ChevroletBird() {
@@ -29,7 +29,7 @@ public class ChevroletBird extends ElectricCar implements Flying {
         if (miles < 0){
             throw new IllegalArgumentException();
         }
-        return getRemainingRange() > miles;
+        return getRemainingRange() >= miles;
     }
 
     /** @throws IllegalArgumentException if miles is negative. 

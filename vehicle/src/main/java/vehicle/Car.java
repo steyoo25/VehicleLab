@@ -62,6 +62,7 @@ public abstract class Car {
             throw new IllegalArgumentException();
         }
         mileage += miles;
+        System.out.println("we added miles to mileage: " + miles + " mileage: " + mileage);
     }
     /** The car attempts to drive, in order, each of the daily number of
     miles in the list milesEachDay. Once the car cannot drive one of the
@@ -71,6 +72,12 @@ public abstract class Car {
     attempted days. The exception check should occur prior to any driving
     is attempted. */
     public int roadTrip(List<Double> milesEachDay){
+
+        for (double day : milesEachDay) {
+            if (day < 0) {
+                throw new IllegalArgumentException();
+            }
+        }
         int days = 0;
         int length = milesEachDay.size();
         for(int i = 0; i < length; i++){
